@@ -1,6 +1,7 @@
 import React from 'react';
 import unsplash from '../../api/unsplash';
-import SearchBar from './search-bar';
+// import SearchBar from './search-bar';
+import SearchBar from '../../common-components/search-bar';
 import ImageList from './image-list';
 
 class App extends React.Component {
@@ -38,7 +39,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
-        <SearchBar onSubmit={this.onSearchSubmit} />
+        <SearchBar
+          onSubmit={this.onSearchSubmit}
+          searchType="Search images"
+        />
         <ImageList images={this.state.images} />
       </div>
     )
